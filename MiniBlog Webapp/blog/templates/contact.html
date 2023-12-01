@@ -1,0 +1,29 @@
+{% extends "base.html" %} 
+{% block content %}
+{% block title %} <title> Contact Us - Blog Aura Wispers </title> {% endblock title%} 
+
+
+<form class="row g-4 mx-auto mb-5" method = "POST">
+      {% csrf_token %}
+    <h2 class="lead display-4 m-0">Contact Page</h2>
+    <hr class="bg-light w-75 mb-3">
+    <div class="col-md-7">
+          <label for="name" class="form-label">Name</label>
+          <input required type="name" placeholder="Full Name" required class="form-control" id="name" name="name">
+    </div>
+    <div class="col-md-7">
+          <label for="inputEmail4" class="form-label">Email</label>
+          <input required type="email" placeholder="yourname@example.com" class="form-control" id="inputEmail4" name="email">
+    </div>
+    <div class="col-md-7 mb-2">
+          <label for="message" class="form-label">Message</label>
+          <textarea required rows="5" name="message" placeholder="Your Message" class="form-control" id="message"></textarea>
+    </div>
+    <div class="col-md-7">
+        <button  type="submit" class="btn btn-outline-light py-2 rounded" style="width: 100%;">Submit</button>
+      </div>
+</form>
+
+{% endblock content %}
+
+

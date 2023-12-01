@@ -1,0 +1,28 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block title %} <title> Home - Blog Aura Whispers </title> {% endblock title %} 
+{% block content %}
+<div class="col-sm-12">
+    {% for message in messages  %}
+    <div {% if message.tags %} class="alert alert-{{message.tags}} alert-dismissible {% endif %} fade show" role="alert">
+        {{ message }}
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+    {% for post in posts %}
+    <div class="container mt-4 mb-5">
+        <div class="h-100 py-5 px-4 text-bg-dark rounded-3">
+            <h2 class="display-5" style="color: rgb(94 234 212);">{{ post.title }}</h2>
+            <hr>
+            <p>{{ post.description|linebreaks|truncatechars:500 }}</p>
+            <hr class="my-4 mx-auto w-75">
+            <p class="mb-2"><small>Author: </small> <strong  style="font-size:16px;  margin-left:6px; color: rgb(163 230 53);  text-transform: capitalize;">{{ post.author.username }}</strong></p>
+            <p><small>Created on:</small>
+                <strong style="margin-left:6px; font-size: 16px;">{{ post.uploaded_at }}</strong></p>
+            <a href="{% url 'read_more' post.id %}" class="btn btn-outline-light">Read More</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

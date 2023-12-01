@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+{% block title %}<title>About Us - Blog Aura Whispers</title> {% endblock title %}
+
+<!-- About Section -->
+<div class="container mt-5 text-light">
+    <h1 class="display-4">About Us</h1>
+    <hr class="bg-light">
+    <div class="mt-5 row">
+        <div class="col-lg-10">
+            <p class="lead">I'm Mohammad Arsalan Rather, a passionate individual skilled in a variety of technologies including HTML, CSS, JavaScript, Django, Python, Tailwind CSS, and Bootstrap. With these tools, I specialize in developing outstanding web applications.</p>
+            <p class="lead">I believe in the transformative power of technology to enhance businesses and enrich lives. My mission is to provide top-notch, innovative solutions that consistently surpass your expectations.</p>
+        </div>
+    </div>
+
+    <div class="mt-5">
+        <h4>Connect With Us:</h4>
+        <ul>
+            <li class="my-3">
+                <a class="text-light link-warning link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://www.instagram.com/_.arsl_an" target="_blank">
+                    <img src="{% static 'assets/instagram.png' %}" alt="Instagram" class="mx-2"> Instagram
+                </a>
+            </li>
+            <li class="my-3">
+                <a class="text-light link-warning link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="https://github.com/Arslanamin404" target="_blank">
+                    <img src="{% static 'assets/github.png' %}" alt="GitHub" class="mx-2"> Github
+                </a>
+            </li>
+            <li class="my-3">
+                <a class="text-light link-warning link-offset-2 link-underline-opacity-0 link-underline-opacity-100-hover" href="mailto:futuregen.jk@gmail.com" target="_blank">
+                    <img src="{% static 'assets/gmail.png' %}" alt="Gmail" class="mx-2"> Gmail
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+{% endblock %}

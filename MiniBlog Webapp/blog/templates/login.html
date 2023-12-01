@@ -1,0 +1,60 @@
+{% extends "base.html" %} 
+{% load static %}
+{% block content %}
+{% block title %} <title> Login - Blog Aura Wispers </title> {% endblock title%} 
+
+    <title>Login - SingIn To Your Account</title>
+  <style>
+    .glass-container {
+        background: rgba(255,255,255,0.8);
+        -webkit-backdrop-filter: blur(12px);
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255,255,255,0.7);
+    }
+    .hover-me{
+        background-color: #fff;
+        font-size: 16px;
+        font-weight:600;
+        cursor: pointer;
+        border: 1px solid gray;
+        transition: background-color 0.3s;
+    }
+    .hover-me:hover{
+        background-color: #FFF0F5;
+    }
+  </style>
+    <div class="mt-4 container text-dark card px-5 pt-4 pb-3 glass-container col-sm-12 col-md-6 col-lg-5">
+        <form method="POST" action="{% url 'login' %}" autocomplete="off">
+
+            {% csrf_token %}
+            <h3 class="text-center text-primary display-6">Sign In to Your Account</h3>
+            <hr>
+            {% for message in messages  %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                {{message}}
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+              </div>
+            {% endfor %}
+            <div class="mb-3">
+                <label class="form-label">Username</label>
+                <input required type="text" minlength="5" maxlength="15" oninput="this.value = this.value.replace(/\s/g,'');" class="form-control" placeholder="@username" aria-describedby="emailHelp" name="username">
+                <!-- This will accept text without space
+                    oninput="this.value = this.value.replace(/\s/g,'');   -->
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input required type="password" minlength="7" class="form-control" name="password" placeholder="Password" id="exampleInputPassword1">
+            </div>
+            <div class="d-flex justify-content-center flex-column">
+                <button type="submit" class="btn btn-primary mb-3 py-2">SignUp</button>
+                <div  class="hover-me d-flex justify-content-center rounded  py-2">
+                    <img  src="{% static 'assets/google.png' %}" alt="gooogle">
+                    <a class=" mx-2 text-decoration-none text-dark" href="https://google.com">Continue with Google</a>
+                </div>
+            </div>
+            <p class="mt-4 text-center">Don't have an account? <a href="{% url 'signup' %}">SignUp here</a></p>
+        </form>
+    </div>
+{% endblock content %}
+
+
