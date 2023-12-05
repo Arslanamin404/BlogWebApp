@@ -28,11 +28,15 @@
             <hr class="mt-5">
             <h1>Comments</h1>
             {% for comment in comments %}
-                <div class="mt-3 shadow p-3 mb-5 rounded-md">
-                    <p class="text-secondary mb-1">{{comment.publish}}</p>
-                    <span class="text-warning">Name: </span> <strong>{{ comment.name }}</strong>
-                    <p class="text-secondary mb-1"> <span class="text-warning">Email: </span> {{comment.email}}</p>
-                    <p>{{ comment.content }}</p>
+                <div class="mt-3 bg-light p-3 mb-5 border rounded" style="box-shadow: 3px 3px 8px #ffc107;">
+                    <div class='d-flex justify-content-between'>
+                        <p class="text-dark"><span class="fw-bold text-warning">Name: </span> <strong>{{ comment.name }}</strong></p>
+                        <div>
+                            <p class="text-secondary m-0">{{comment.publish}}</p>
+                            <p class="text-secondary m-0"> <span class="fw-bold text-warning">Email: </span> <a class="text-secondary" href="mailto:{{comment.email}}">{{comment.email}}</a></p>
+                        </div>
+                    </div>
+                    <p class="fst-italic text-dark my-3">{{ comment.content }}</p>
 
                 </div>
             {% endfor %}
