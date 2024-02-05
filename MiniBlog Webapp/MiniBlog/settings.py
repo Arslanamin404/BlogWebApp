@@ -79,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'MiniBlog',
         'USER': 'root',
-        'PASSWORD': 'futuregen',
+        'PASSWORD': 'yourpass',
         'HOST': 'localhost',
     }
 }
