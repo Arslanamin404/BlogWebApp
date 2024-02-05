@@ -10,6 +10,23 @@ This Blog Web Application is a Django-based web app that allows users to create,
 - Dashboard for users to manage their posts.
 - Contact form for users to send feedback or inquiries.
 
+
+## Screenshots
+![Screenshot 1](screenshots/Screenshot1.png)
+![Screenshot 2](screenshots/Screenshot2.png)
+![Screenshot 3](screenshots/Screenshot3.png)
+![Screenshot 4](screenshots/Screenshot4.png)
+![Screenshot 5](screenshots/Screenshot5.png)
+![Screenshot 6](screenshots/Screenshot6.png)
+![Screenshot 7](screenshots/Screenshot7.png)
+![Screenshot 8](screenshots/Screenshot8.png)
+![Screenshot 9](screenshots/Screenshot9.png)
+
+
+
+
+
+
 ## Prerequisites
 
 Before you get started, ensure you have the following requirements:
@@ -69,18 +86,6 @@ source venv/bin/activate
 ```
 
 
-
-
-## Screenshots
-![Screenshot 1](screenshots/Screenshot1.png)
-![Screenshot 2](screenshots/Screenshot2.png)
-![Screenshot 3](screenshots/Screenshot3.png)
-![Screenshot 4](screenshots/Screenshot4.png)
-![Screenshot 5](screenshots/Screenshot5.png)
-![Screenshot 6](screenshots/Screenshot6.png)
-![Screenshot 7](screenshots/Screenshot7.png)
-![Screenshot 8](screenshots/Screenshot8.png)
-![Screenshot 9](screenshots/Screenshot9.png)
 
 
 
